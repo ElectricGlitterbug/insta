@@ -20,7 +20,7 @@ namespace Session6Instagram.Models
     public class Photo
     {
         public int Id { get; set; }
-        public string Picture { get; set; }
+        public byte[] Picture { get; set; }
         public DateTime Date { get; set; }
         public string Caption { get; set; }
 

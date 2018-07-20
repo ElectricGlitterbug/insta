@@ -158,6 +158,10 @@
     <Compile Include="Migrations\201807182232106_UsersAndPhotos.Designer.cs">
       <DependentUpon>201807182232106_UsersAndPhotos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807190035218_photouplod.cs" />
+    <Compile Include="Migrations\201807190035218_photouplod.Designer.cs">
+      <DependentUpon>201807190035218_photouplod.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\instagrames.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -226,6 +230,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201807182232106_UsersAndPhotos.resx">
       <DependentUpon>201807182232106_UsersAndPhotos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807190035218_photouplod.resx">
+      <DependentUpon>201807190035218_photouplod.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

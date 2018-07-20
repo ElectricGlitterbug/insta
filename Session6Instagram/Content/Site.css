@@ -22,3 +22,10 @@ select,
 textarea {
     max-width: 280px;
 }
+
+
+.post{
+    color: purple;
+    float: left;
+    padding: 7px;
+}
