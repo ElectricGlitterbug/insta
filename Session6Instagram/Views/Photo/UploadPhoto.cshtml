@@ -7,13 +7,7 @@
 <h2>UploadPhoto</h2>
 
 <form action="savephoto" method="post" enctype="multipart/form-data">
-    <select name="userId">
-        @foreach (var user in Model)
-        {
-            <option value="@user.Id">@user.Name</option>
-        }
-    </select>
-
+    
     <input type="file" accept="image/x-png, image/gif, image/jpeg" name="photo" />
     <input type="text" name="caption" />
     <button type="submit">Done!</button>

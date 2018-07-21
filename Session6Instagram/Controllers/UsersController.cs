@@ -35,6 +35,36 @@ namespace Session6Instagram.Controllers
             return View(user);
         }
 
+
+        // LOGin Action
+        public ActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Login(string name)
+        {
+            
+                var findUser = db.Users.Where(x => x.Name == name).FirstOrDefault();
+                if (findUser != null)
+                {
+                    System.Web.HttpContext.Current.Session["userID"] = findUser.Id;
+                    return RedirectToAction("Feed", "Photo");
+
+                }
+                
+                
+            
+               return RedirectToAction("Create");
+
+
+
+        }
+
+
+
+
         // GET: Users/Create
         public ActionResult Create()
         {

@@ -4,7 +4,12 @@
     ViewBag.Title = "Feed";
 }
 
-<h2>This is where the header goes</h2>
+@Html.ActionLink("Upload a photo", "UploadPhoto")
+
+
+<h2>
+    Welcome @ViewBag.user.Name
+</h2>
 
 <div class="row">
 
@@ -12,27 +17,27 @@
     @foreach (var photo in Model)
     {
 
-        
 
-      
+
+
 
 
         var base64 = Convert.ToBase64String(photo.Picture);
         var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
 
 
-    <div class="col-md-3" style="height: 350px; width: 350px; padding-bottom : 20px;">
-        <img src="/photo/getimage?id=@photo.Id" class="img-responsive" style="object-fit:contain; height: 75%; width: 75%" />
+        <div class="col-md-3" style="height: 350px; width: 350px; padding-bottom : 20px;">
+            <img src="/photo/getimage?id=@photo.Id" class="img-responsive" style="object-fit:contain; height: 75%; width: 75%" />
 
 
 
 
 
-        <p>@photo.Caption</p>
+            <p>@photo.Caption</p>
 
-        <p>Image by: @photo.PhotoUser.Name</p>
-        <p>Uploaded: @photo.Date</p>
-    </div>
-        
+            <p>Image by: @photo.PhotoUser.Name</p>
+            <p>Uploaded: @photo.Date</p>
+        </div>
+
     }
-    </div>
+</div>
